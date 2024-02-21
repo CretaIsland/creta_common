@@ -159,4 +159,32 @@ class CretaLang {
   static const String nodatafounded = '자료가 없습니다';
   static const String needToLoginTitle = '로그인 필요';
   static const String needToLogin = '로그인이 필요한 기능입니다';
+
+  static Map<String, int> pageTransitionType2 = {
+    "없음": 0,
+    "서서히 사라지기": 1, // AnimatedOpacity
+    "점점 작아지기": 2, // AnimatedScale , ScaleTransition
+    "좌우 슬라이딩": 3, // AnimatedPositioned , SlideTransition
+    "상하 슬라이딩": 4, // AnimatedPositioned ,SlideTransition
+  };
+  // 나타날때,
+  static Map<String, int> pageTransitionType = {
+    "없음": 0,
+    "서서히 나타나기": 1, // AnimatedOpacity
+    "점점 커지기": 2, // AnimatedScale , ScaleTransition
+    "좌우 슬라이딩": 3, // AnimatedPositioned , SlideTransition
+    "상하 슬라이딩": 4, // AnimatedPositioned ,SlideTransition
+  };
+
+  static List<String> animationTypes = [
+    "없음",
+    "페이드 인",
+    "플립",
+    "흔들기",
+    "흐려지기",
+    "커지기",
+    "회전",
+    "좌우로 움직이기",
+    "상하로 움직이기",
+  ];
 }
