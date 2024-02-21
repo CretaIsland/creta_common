@@ -187,4 +187,7 @@ class CretaLang {
     "좌우로 움직이기",
     "상하로 움직이기",
   ];
+
+  static const String autoFontSize = '프레임 크기에 텍스트 크기 조절 ';
+  static const String autoFrameHeight = '텍스트 크기에 프레임 크기 조절 ';
 }
