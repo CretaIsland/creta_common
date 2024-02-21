@@ -455,8 +455,6 @@ class CretaCommonUtils {
   //   }
   //}
 
-  
-
   static List<List<double>> borderStyle = [
     [132, 0],
     [4, 4],
@@ -465,8 +463,6 @@ class CretaCommonUtils {
     [16, 4],
     [16, 16],
   ];
-
-  
 
   static double validCheckDouble(double target, double min, double max) {
     if (target < min) return min;
@@ -623,7 +619,6 @@ class CretaCommonUtils {
     return result;
   }
 
- 
   static double timeLap() {
     DateTime now = DateTime.now();
     int retval = now.difference(debugTime).inMicroseconds;
@@ -710,8 +705,6 @@ class CretaCommonUtils {
   //   );
   // }
 
- 
- 
   // image crop
   static Uint8List cropImage(
       Uint8List sourceImgBytes, Offset cropOffset, double ratio, Size frameSize) {
@@ -768,7 +761,6 @@ class CretaCommonUtils {
   // }
 
   // 커서모양을 정해주는 함수
-  
 
   static Future<ui.Image> loadImageFromUrl(String imageUrl) async {
     // 이미지 URL에서 데이터를 가져옵니다.
@@ -793,8 +785,6 @@ class CretaCommonUtils {
       ..click();
     html.Url.revokeObjectUrl(url);
   }
-
- 
 
   static Widget underConstruction(
       {required double width, required double height, EdgeInsetsGeometry? padding}) {
@@ -827,17 +817,15 @@ class CretaCommonUtils {
     return textPainter.size;
   }
 
- 
-
   static bool checkPasswordStrength(
-      String password, {
-        bool reqAlphabet = true,
-        bool reqMixCase = false,
-        bool reqNumber = true,
-        bool reqSpecialChar = false,
-        int minLength = 6,
-        int maxLength = 16,
-      }) {
+    String password, {
+    bool reqAlphabet = true,
+    bool reqMixCase = false,
+    bool reqNumber = true,
+    bool reqSpecialChar = false,
+    int minLength = 6,
+    int maxLength = 16,
+  }) {
     String pattern = '^';
     if (reqAlphabet) {
       pattern += (reqMixCase) ? '(?=.*?[A-Z])(?=.*?[a-z])' : '(?=.*?[a-zA-Z])';
