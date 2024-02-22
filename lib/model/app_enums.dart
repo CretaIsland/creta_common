@@ -281,6 +281,19 @@ enum ContentsFitType {
   }
 }
 
+enum MusicPlayerSizeEnum {
+  none,
+  Big,
+  Medium,
+  Small,
+  Tiny,
+  end;
+
+  static int validCheck(int val) => (val > end.index || val < none.index) ? none.index : val;
+  static MusicPlayerSizeEnum fromInt(int? val) =>
+      MusicPlayerSizeEnum.values[validCheck(val ?? none.index)];
+}
+
 // enum BorderPositionType {
 //   none,
 //   outSide,
