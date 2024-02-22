@@ -3,5 +3,28 @@ class CretaConst {
   static const double minFontSize = stepGranularity * 5;
   static const double maxFontSize = 512;
   static const double defaultFontSize = 64.0;
-}
 
+  static Map<String, int> fontWeightStr2Int = {
+    'Thin': 100,
+    'ExtraLight': 200,
+    'Light': 300,
+    'Regular': 400,
+    'Medium': 500,
+    'SemiBold': 600,
+    'Bold': 700,
+    'ExtraBold': 800,
+    'Black': 900,
+  };
+
+  static Map<int, String> fontWeightInt2Str = {
+    100: 'Thin',
+    200: 'ExtraLight',
+    300: 'Light',
+    400: 'Regular',
+    500: 'Medium',
+    600: 'SemiBold',
+    700: 'Bold',
+    800: 'ExtraBold',
+    900: 'Black',
+  };
+}
