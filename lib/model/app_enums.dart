@@ -294,6 +294,17 @@ enum MusicPlayerSizeEnum {
       MusicPlayerSizeEnum.values[validCheck(val ?? none.index)];
 }
 
+enum NewsSizeEnum {
+  none,
+  Big,
+  Medium,
+  Small,
+  end;
+
+  static int validCheck(int val) => (val > end.index || val < none.index) ? none.index : val;
+  static NewsSizeEnum fromInt(int? val) => NewsSizeEnum.values[validCheck(val ?? none.index)];
+}
+
 // enum BorderPositionType {
 //   none,
 //   outSide,
