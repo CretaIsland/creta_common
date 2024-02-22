@@ -163,6 +163,8 @@ class CretaLang {
   static const String noNamepage = '이름없는 페이지';
   static const String noNameframe = '이름없는 프레임';
 
+  static const String sampleBookName = "이름없는 크레타북";
+
   static Map<String, int> pageTransitionType2 = {
     "없음": 0,
     "서서히 사라지기": 1, // AnimatedOpacity
