@@ -160,6 +160,9 @@ class CretaLang {
   static const String needToLoginTitle = '로그인 필요';
   static const String needToLogin = '로그인이 필요한 기능입니다';
 
+  static const String noNamepage = '이름없는 페이지';
+  static const String noNameframe = '이름없는 프레임';
+
   static Map<String, int> pageTransitionType2 = {
     "없음": 0,
     "서서히 사라지기": 1, // AnimatedOpacity
