@@ -1,4 +1,6 @@
-import 'dart:ui';
+// ignore_for_file: non_constant_identifier_names
+
+import 'package:flutter/material.dart';
 
 class CretaConst {
   static const double appbarHeight = 60;
@@ -12,6 +14,10 @@ class CretaConst {
   static const double minFontSize = stepGranularity * 5;
   static const double maxFontSize = 512;
   static const double defaultFontSize = 64.0;
+
+  static const Size bookThumbSize = Size(290.0, 256.0);
+  static const double cretaBannerMinHeight = 196;
+  static const double cretaPaddingPixel = 40;
 
   static Map<String, int> fontWeightStr2Int = {
     'Thin': 100,
@@ -48,4 +54,37 @@ class CretaConst {
     800: FontWeight.w800,
     900: FontWeight.w900,
   };
+}
+
+class CretaComponentLocation {
+  EdgeInsets margin; // 바깥여백
+  EdgeInsets padding; // 안쪽여백
+  double width;
+  double height;
+
+  static const EdgeInsets noSpace = EdgeInsets.all(0);
+
+  CretaComponentLocation(
+      {this.margin = noSpace,
+      this.padding = noSpace,
+      this.width = double.infinity,
+      this.height = double.infinity});
+
+  // 각 컴포넌트 좌표 & 크기
+  static CretaComponentLocation BarTop = CretaComponentLocation(
+    height: 60,
+  );
+  static CretaComponentLocation TabBar = CretaComponentLocation(
+    padding: const EdgeInsets.fromLTRB(32, 40, 32, 40),
+    width: 310.0,
+  );
+  static CretaComponentLocation ListInTabBar = CretaComponentLocation(
+    padding: const EdgeInsets.fromLTRB(0, 0, 0, 40),
+    width: 246.0,
+  );
+  static CretaComponentLocation UserMenuInTabBar = CretaComponentLocation(
+    padding: const EdgeInsets.fromLTRB(16, 20, 16, 20),
+    width: 246.0,
+    height: 192.0,
+  );
 }
