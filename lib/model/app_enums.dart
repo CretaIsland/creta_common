@@ -19,16 +19,24 @@ import 'package:flutter/material.dart';
 import '../lang/creta_lang.dart';
 
 enum BookType {
-  none(0),
-  presentaion(1),
-  signage(2),
-  digitalBarricade(4),
-  board(8),
-  etc(16),
-  end(1024);
-
-  const BookType(this.value);
-  final int value;
+  none,
+  presentaion, //1,
+  signage, //2
+  dummy3, //not used
+  digitalBarricade, // 4
+  dymmy5, // not used
+  dymmy6, // not used
+  dymmy7, // not used
+  board, // 8,
+  dymmy9, // not used
+  dymmy10, // not used
+  dymmy11, // not used
+  dymmy12, // not used
+  dymmy13, // not used
+  dymmy14, // not used
+  dymmy15, // not used
+  etc, // 16,
+  end;
 
   static int validCheck(int val) => (val > end.index || val < none.index) ? none.index : val;
   static BookType fromInt(int? val) => BookType.values[validCheck(val ?? none.index)];
