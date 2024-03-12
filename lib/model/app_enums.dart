@@ -25,6 +25,7 @@ enum ServiceType {
   digitalBarricade,
   board,
   escalator,
+  cdu,
   etc,
   end;
 
@@ -39,6 +40,7 @@ enum BookType {
   digitalBarricade,
   board,
   escalator,
+  cdu,
   etc,
   end;
 
