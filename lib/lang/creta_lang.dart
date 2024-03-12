@@ -11,8 +11,9 @@ class CretaLang {
   static const List<String> basicBookFilter = [
     "용도별(전체)",
     "프리젠테이션용",
-    "전차칠판용",
     "디지털사이니지용",
+    "디지털바리케이드용",
+    "전차칠판용",
     "기타",
   ];
 

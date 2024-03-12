@@ -22,6 +22,7 @@ enum BookType {
   none,
   presentaion,
   signage,
+  digitalBarricade,
   board,
   etc,
   end;
