@@ -18,12 +18,27 @@ import 'package:flutter/material.dart';
 
 import '../lang/creta_lang.dart';
 
+enum ServiceType {
+  none,
+  presentaion,
+  signage,
+  digitalBarricade,
+  board,
+  escalator,
+  etc,
+  end;
+
+  static int validCheck(int val) => (val > end.index || val < none.index) ? none.index : val;
+  static ServiceType fromInt(int? val) => ServiceType.values[validCheck(val ?? none.index)];
+}
+
 enum BookType {
   none,
   presentaion,
   signage,
   digitalBarricade,
   board,
+  escalator,
   etc,
   end;
 
