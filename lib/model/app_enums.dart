@@ -20,22 +20,11 @@ import '../lang/creta_lang.dart';
 
 enum BookType {
   none,
-  presentaion, //1,
-  signage, //2
-  dummy3, //not used
-  digitalBarricade, // 4
-  dymmy5, // not used
-  dymmy6, // not used
-  dymmy7, // not used
-  board, // 8,
-  dymmy9, // not used
-  dymmy10, // not used
-  dymmy11, // not used
-  dymmy12, // not used
-  dymmy13, // not used
-  dymmy14, // not used
-  dymmy15, // not used
-  etc, // 16,
+  presentaion,
+  signage,
+  digitalBarricade,
+  board,
+  etc,
   end;
 
   static int validCheck(int val) => (val > end.index || val < none.index) ? none.index : val;
