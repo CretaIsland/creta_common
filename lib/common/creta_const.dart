@@ -3,9 +3,6 @@
 import 'package:flutter/material.dart';
 
 class CretaConst {
-  static const Size defaultSize = Size(1920, 1080);
-  static const Size barricadSize = Size(360, 28);
-
   static const double orderVar = 0.0000001;
 
   static const double appbarHeight = 60;

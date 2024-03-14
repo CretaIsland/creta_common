@@ -28,4 +28,25 @@ class CretaVars {
         return BookType.signage;
     }
   }
+
+  static Size defaultSize() {
+    switch (CretaVars.serviceType) {
+      case ServiceType.signage:
+        return const Size(1080, 1920);
+      case ServiceType.digitalBarricade:
+        return const Size(360, 28);
+      case ServiceType.presentaion:
+        return const Size(1920, 1080);
+      case ServiceType.escalator:
+        return const Size(1920, 1080);
+      case ServiceType.board:
+        return const Size(1920, 1080);
+      case ServiceType.cdu:
+        return const Size(1920, 1080);
+      case ServiceType.etc:
+        return const Size(1920, 1080);
+      default:
+        return const Size(1920, 1080);
+    }
+  }
 }
