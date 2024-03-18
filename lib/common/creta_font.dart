@@ -61,4 +61,11 @@ class CretaFont {
   );
   static TextStyle buttonMedium = buttonSmall.copyWith(fontSize: 13);
   static TextStyle buttonLarge = buttonSmall.copyWith(fontSize: 15);
+
+  static TextStyle logoStyle = const TextStyle(
+    fontFamily: 'GodoRounded',
+    fontWeight: FontWeight.w400,
+    fontSize: 16,
+    color: Colors.white,
+  );
 }

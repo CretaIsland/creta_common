@@ -25,7 +25,7 @@ class CretaVars {
       case ServiceType.etc:
         return BookType.etc;
       default:
-        return BookType.signage;
+        return BookType.none;
     }
   }
 
@@ -47,6 +47,48 @@ class CretaVars {
         return const Size(1920, 1080);
       default:
         return const Size(1920, 1080);
+    }
+  }
+
+  static Size defaultFrameSize() {
+    switch (CretaVars.serviceType) {
+      case ServiceType.signage:
+        return const Size(1080, 1920);
+      case ServiceType.digitalBarricade:
+        return const Size(360, 28);
+      case ServiceType.presentaion:
+        return const Size(600, 400);
+      case ServiceType.escalator:
+        return const Size(1920, 1080);
+      case ServiceType.board:
+        return const Size(1920, 1080);
+      case ServiceType.cdu:
+        return const Size(1920, 1080);
+      case ServiceType.etc:
+        return const Size(1920, 1080);
+      default:
+        return const Size(1920, 1080);
+    }
+  }
+
+  static String serviceTypeString() {
+    switch (CretaVars.serviceType) {
+      case ServiceType.signage:
+        return "signage";
+      case ServiceType.digitalBarricade:
+        return "digitalBarricade";
+      case ServiceType.presentaion:
+        return "presentaion";
+      case ServiceType.escalator:
+        return "escalator";
+      case ServiceType.board:
+        return "board";
+      case ServiceType.cdu:
+        return "cdu";
+      case ServiceType.etc:
+        return "etc";
+      default:
+        return "";
     }
   }
 }
