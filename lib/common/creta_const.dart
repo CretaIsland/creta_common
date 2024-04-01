@@ -6,6 +6,7 @@ class CretaConst {
   static const double orderVar = 0.0000001;
 
   static const double appbarHeight = 60;
+  static const double verticalAppbarWidth = 60;
 
   static const String bookPrefix = 'Book=';
   static const String pagePrefix = 'Page=';
@@ -77,8 +78,9 @@ class CretaComponentLocation {
     height: 60,
   );
   static CretaComponentLocation TabBar = CretaComponentLocation(
-    padding: const EdgeInsets.fromLTRB(32, 40, 32, 40),
-    width: 310.0,
+    padding: const EdgeInsets.fromLTRB(16, 20, 16, 40),
+    //32 - CretaConst.verticalAppbarWidth / 2, 40, 32 - CretaConst.verticalAppbarWidth / 2, 40),
+    width: 310.0 - CretaConst.verticalAppbarWidth,
   );
   static CretaComponentLocation ListInTabBar = CretaComponentLocation(
     padding: const EdgeInsets.fromLTRB(0, 0, 0, 40),

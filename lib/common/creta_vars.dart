@@ -12,8 +12,8 @@ class CretaVars {
     switch (CretaVars.serviceType) {
       case ServiceType.signage:
         return BookType.signage;
-      case ServiceType.digitalBarricade:
-        return BookType.digitalBarricade;
+      case ServiceType.barricade:
+        return BookType.barricade;
       case ServiceType.presentaion:
         return BookType.presentaion;
       case ServiceType.escalator:
@@ -33,7 +33,7 @@ class CretaVars {
     switch (CretaVars.serviceType) {
       case ServiceType.signage:
         return const Size(1080, 1920);
-      case ServiceType.digitalBarricade:
+      case ServiceType.barricade:
         return const Size(360, 28);
       case ServiceType.presentaion:
         return const Size(1920, 1080);
@@ -54,7 +54,7 @@ class CretaVars {
     switch (CretaVars.serviceType) {
       case ServiceType.signage:
         return const Size(1080, 1920);
-      case ServiceType.digitalBarricade:
+      case ServiceType.barricade:
         return const Size(360, 28);
       case ServiceType.presentaion:
         return const Size(600, 400);
@@ -75,8 +75,8 @@ class CretaVars {
     switch (CretaVars.serviceType) {
       case ServiceType.signage:
         return "signage";
-      case ServiceType.digitalBarricade:
-        return "digitalBarricade";
+      case ServiceType.barricade:
+        return "barricade";
       case ServiceType.presentaion:
         return "presentaion";
       case ServiceType.escalator:
