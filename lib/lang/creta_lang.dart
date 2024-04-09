@@ -1,6 +1,7 @@
 // ignore_for_file: non_constant_identifier_names, constant_identifier_names
 
 class CretaLang {
+  static const String fold = '접기';
   static const String billInfo = '요금제 정보';
   static const String searchBar = '검색어를 입력하세요';
   static const String all = '전체';
