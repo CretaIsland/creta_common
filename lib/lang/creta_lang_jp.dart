@@ -3,7 +3,7 @@
 import 'creta_lang.dart';
 
 class CretaLangJP extends AbsCretaLang {
-  CretaLangJP() {
+  CretaLangJP() : super() {
     fold = '折りたたみ';
     billInfo = '料金制情報';
     searchBar = '検索語を入力してください';
