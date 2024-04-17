@@ -5,8 +5,8 @@ import 'creta_lang.dart';
 class CretaLangEN extends AbsCretaLang {
   CretaLangEN() : super() {
     fold = 'fold';
-    billInfo = 'Price plan information';
-    searchBar = 'Enter your search term';
+    billInfo = 'Price plan';
+    searchBar = 'Enter your search word here';
     all = 'all';
     properties = 'properties';
     mute = 'no sound/present';
