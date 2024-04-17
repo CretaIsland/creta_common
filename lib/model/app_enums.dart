@@ -537,13 +537,12 @@ enum AutoSizeType {
   static int validCheck(int val) => (val > end.index || val < none.index) ? none.index : val;
   static AutoSizeType fromInt(int? val) => AutoSizeType.values[validCheck(val ?? none.index)];
   static AutoSizeType fromString(String val) {
-    switch (val) {
-      case CretaLang.autoFontSize:
-        return AutoSizeType.autoFontSize;
-      case CretaLang.autoFrameHeight:
-        return AutoSizeType.autoFrameHeight;
-      default:
-        return AutoSizeType.noAutoSize;
+    if (val == CretaLang.autoFontSize) {
+      return AutoSizeType.autoFontSize;
+    } else if (val == CretaLang.autoFrameHeight) {
+      return AutoSizeType.autoFrameHeight;
+    } else {
+      return AutoSizeType.noAutoSize;
     }
   }
 }
