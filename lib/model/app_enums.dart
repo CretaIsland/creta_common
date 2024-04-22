@@ -198,7 +198,7 @@ enum PageTransitionType {
       PageTransitionType.values[validCheck(val ?? none.index)];
 
   String getTitle() {
-    for (var item in CretaLang.pageTransitionType.entries) {
+    for (var item in CretaLang['pageTransitionType']!.entries) {
       if (item.value == index) {
         return item.key;
       }
@@ -207,7 +207,7 @@ enum PageTransitionType {
   }
 
   static String getTitleFromInt(int idx) {
-    for (var item in CretaLang.pageTransitionType.entries) {
+    for (var item in CretaLang['pageTransitionType']!.entries) {
       if (item.value == idx) {
         return item.key;
       }
@@ -216,7 +216,7 @@ enum PageTransitionType {
   }
 
   static String getTitleFromInt2(int idx) {
-    for (var item in CretaLang.pageTransitionType2.entries) {
+    for (var item in CretaLang['pageTransitionType2']!.entries) {
       if (item.value == idx) {
         return item.key;
       }
@@ -537,9 +537,9 @@ enum AutoSizeType {
   static int validCheck(int val) => (val > end.index || val < none.index) ? none.index : val;
   static AutoSizeType fromInt(int? val) => AutoSizeType.values[validCheck(val ?? none.index)];
   static AutoSizeType fromString(String val) {
-    if (val == CretaLang.autoFontSize) {
+    if (val == CretaLang['autoFontSize']!) {
       return AutoSizeType.autoFontSize;
-    } else if (val == CretaLang.autoFrameHeight) {
+    } else if (val == CretaLang['autoFrameHeight']!) {
       return AutoSizeType.autoFrameHeight;
     } else {
       return AutoSizeType.noAutoSize;

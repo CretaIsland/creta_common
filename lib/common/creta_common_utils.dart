@@ -29,31 +29,31 @@ class CretaCommonUtils {
     String retval = '';
 
     if (hours > 0) {
-      retval = '$hoursStr ${CretaLang.hours} ';
+      retval = '$hoursStr ${CretaLang['hours']!} ';
     }
     if (hours > 0 || minutes > 0) {
-      retval += '$minutesStr ${CretaLang.minutes} ';
+      retval += '$minutesStr ${CretaLang['minutes']!} ';
     }
-    retval += '$secondsStr ${CretaLang.seconds}';
+    retval += '$secondsStr ${CretaLang['seconds']!}';
     return retval;
   }
 
   static String dateToDurationString(DateTime updateTime) {
     Duration duration = DateTime.now().difference(updateTime);
     if (duration.inDays >= 365) {
-      return '${((duration.inDays / 365) * 10).round()} ${CretaLang.yearBefore}';
+      return '${((duration.inDays / 365) * 10).round()} ${CretaLang['yearBefore']!}';
     }
     if (duration.inDays >= 30) {
-      return '${((duration.inDays / 30) * 10).round()} ${CretaLang.monthBefore}';
+      return '${((duration.inDays / 30) * 10).round()} ${CretaLang['monthBefore']!}';
     }
     if (duration.inDays >= 1) {
-      return '${duration.inDays} ${CretaLang.dayBefore}';
+      return '${duration.inDays} ${CretaLang['dayBefore']!}';
     }
     if (duration.inHours >= 1) {
-      return '${duration.inHours} ${CretaLang.hourBefore}';
+      return '${duration.inHours} ${CretaLang['hourBefore']!}';
     }
 
-    return '${duration.inMinutes} ${CretaLang.minBefore}';
+    return '${duration.inMinutes} ${CretaLang['minBefore']!}';
   }
 
   static DateTime getTimeSecondsAgo(int sec) {
@@ -499,49 +499,49 @@ class CretaCommonUtils {
 
   static String getFontName(String font) {
     if (font == "NanumMyeongjo") {
-      return CretaLang.fontNanum_Myeongjo;
+      return CretaLang['fontNanum_Myeongjo']!;
     }
     if (font == "NotoSansKR") {
-      return CretaLang.fontNoto_Sans_KR;
+      return CretaLang['fontNoto_Sans_KR']!;
     }
     if (font == "Jua") {
-      return CretaLang.fontJua;
+      return CretaLang['fontJua']!;
     }
     if (font == "NanumGothic") {
-      return CretaLang.fontNanum_Gothic;
+      return CretaLang['fontNanum_Gothic']!;
     }
     if (font == "NanumPenScript") {
-      return CretaLang.fontNanum_Pen_Script;
+      return CretaLang['fontNanum_Pen_Script']!;
     }
     if (font == "NotoSansKR") {
-      return CretaLang.fontNoto_Sans_KR;
+      return CretaLang['fontNoto_Sans_KR']!;
     }
     if (font == "Macondo") {
-      return CretaLang.fontMacondo;
+      return CretaLang['fontMacondo']!;
     }
-    return CretaLang.fontPretendard;
+    return CretaLang['fontPretendard']!;
   }
 
   static String getFontFamily(String font) {
-    if (font == CretaLang.fontNanum_Myeongjo) {
+    if (font == CretaLang['fontNanum_Myeongjo']!) {
       return "NanumMyeongjo";
     }
-    if (font == CretaLang.fontNoto_Sans_KR) {
+    if (font == CretaLang['fontNoto_Sans_KR']!) {
       return "NotoSansKR";
     }
-    if (font == CretaLang.fontJua) {
+    if (font == CretaLang['fontJua']!) {
       return "Jua";
     }
-    if (font == CretaLang.fontNanum_Gothic) {
+    if (font == CretaLang['fontNanum_Gothic']!) {
       return "NanumGothic";
     }
-    if (font == CretaLang.fontNanum_Pen_Script) {
+    if (font == CretaLang['fontNanum_Pen_Script']!) {
       return "NanumPenScript";
     }
-    if (font == CretaLang.fontNoto_Sans_KR) {
+    if (font == CretaLang['fontNoto_Sans_KR']!) {
       return "NotoSansKR";
     }
-    if (font == CretaLang.fontMacondo) {
+    if (font == CretaLang['fontMacondo']!) {
       return "Macondo";
     }
 
@@ -870,5 +870,15 @@ class CretaCommonUtils {
     }
 
     return currentSize;
+  }
+
+  static Future<Map<String, dynamic>> readJsonFromAssets(String fileName) async {
+    final response = await http.get(Uri.parse('assets/$fileName'));
+
+    if (response.statusCode == 200) {
+      return jsonDecode(response.body);
+    } else {
+      throw Exception('Failed to load JSON file');
+    }
   }
 }
