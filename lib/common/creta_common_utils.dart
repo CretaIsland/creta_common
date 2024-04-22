@@ -873,11 +873,13 @@ class CretaCommonUtils {
   }
 
   static Future<Map<String, dynamic>> readJsonFromAssets(String fileName) async {
-    final response = await http.get(Uri.parse(fileName));
+    final response = await http.get(Uri.parse('assets/$fileName'));
 
     if (response.statusCode == 200) {
+      print('$fileName, read succeeded');
       return jsonDecode(response.body);
     } else {
+      print('!!!!! Failed to load JSON file $fileName, ${response.statusCode} !!!!!');
       throw Exception('Failed to load JSON file');
     }
   }
