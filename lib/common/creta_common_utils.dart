@@ -876,8 +876,7 @@ class CretaCommonUtils {
     final response = await http.get(Uri.parse('assets/$fileName'));
 
     if (response.statusCode == 200) {
-      print('$fileName, read succeeded');
-      return jsonDecode(response.body);
+      return jsonDecode(utf8.decode(response.bodyBytes));
     } else {
       print('!!!!! Failed to load JSON file $fileName, ${response.statusCode} !!!!!');
       throw Exception('Failed to load JSON file');
