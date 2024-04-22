@@ -4,12 +4,12 @@ import '../model/app_enums.dart';
 // import 'creta_lang_en.dart';
 // import 'creta_lang_jp.dart';
 // import 'creta_lang_kr.dart';
-import 'creta_lang_mixin.dart';
+// import 'creta_lang_mixin.dart';
 
 //AbsCretaLang CretaLang = CretaLangKR();
 Map<String, dynamic> CretaLang = {};
 
-abstract class AbsCretaLang with CretaLangMixin {
+abstract class AbsCretaLang /*with CretaLangMixin */ {
   //LanguageType language = LanguageType.korean;
 
   AbsCretaLang();
