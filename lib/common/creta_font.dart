@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'creta_color.dart';
 
 class CretaFont {
-  static const fontFamily = 'Pretendard';
+  static String fontFamily = 'Pretendard';
 
   static const FontWeight regular = FontWeight.w400;
   static const FontWeight thin = FontWeight.w100;
@@ -14,7 +14,7 @@ class CretaFont {
   static const FontWeight extraBold = FontWeight.w800;
   static const FontWeight black = FontWeight.w900;
 
-  static TextStyle headlineSmall = const TextStyle(
+  static TextStyle headlineSmall = TextStyle(
     fontFamily: fontFamily,
     fontWeight: light,
     fontSize: 26,
@@ -23,7 +23,7 @@ class CretaFont {
   static TextStyle headlineMedium = headlineSmall.copyWith(fontSize: 30);
   static TextStyle headlineLarge = headlineSmall.copyWith(fontSize: 40);
 
-  static TextStyle titleSmall = const TextStyle(
+  static TextStyle titleSmall = TextStyle(
     fontFamily: fontFamily,
     fontWeight: medium,
     fontSize: 14,
@@ -34,7 +34,7 @@ class CretaFont {
   static TextStyle titleELarge = titleSmall.copyWith(fontSize: 22);
   static TextStyle titleTiny = titleSmall.copyWith(fontSize: 12);
 
-  static TextStyle displaySmall = const TextStyle(
+  static TextStyle displaySmall = TextStyle(
     fontFamily: fontFamily,
     fontWeight: medium,
     fontSize: 40,
@@ -43,7 +43,7 @@ class CretaFont {
   static TextStyle displayMedium = displaySmall.copyWith(fontSize: 50);
   static TextStyle displayLarge = displaySmall.copyWith(fontSize: 60);
 
-  static TextStyle bodyESmall = const TextStyle(
+  static TextStyle bodyESmall = TextStyle(
     fontFamily: fontFamily,
     fontWeight: regular,
     fontSize: 12,
@@ -53,7 +53,7 @@ class CretaFont {
   static TextStyle bodyMedium = bodyESmall.copyWith(fontSize: 16);
   static TextStyle bodyLarge = bodyESmall.copyWith(fontSize: 20);
 
-  static TextStyle buttonSmall = const TextStyle(
+  static TextStyle buttonSmall = TextStyle(
     fontFamily: fontFamily,
     fontWeight: medium,
     fontSize: 11,
