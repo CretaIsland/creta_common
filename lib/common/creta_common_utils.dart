@@ -501,6 +501,9 @@ class CretaCommonUtils {
     if (font == "NanumMyeongjo") {
       return CretaLang['fontNanum_Myeongjo']!;
     }
+    if (font == "NotoSerifJP") {
+      return CretaLang['fontNotoSerifJP']!;
+    }
     if (font == "NotoSansKR") {
       return CretaLang['fontNoto_Sans_KR']!;
     }
@@ -523,6 +526,10 @@ class CretaCommonUtils {
   }
 
   static String getFontFamily(String font) {
+    if (font == CretaLang['fontNotoSerifJP']!) {
+      return "NotoSerifJP";
+    }
+
     if (font == CretaLang['fontNanum_Myeongjo']!) {
       return "NanumMyeongjo";
     }

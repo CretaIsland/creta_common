@@ -63,6 +63,7 @@
     "fontNoto_Sans_KR": "Noto Sans KR",
     "fontPretendard": "Pretendard",
     "fontMacondo": "MacondoMacondo",
+    "fontNotoSerifJP": "NotoSerifJP",
     "fontStringList": ["Nanum Myeongjo", "Infant", "Nanum Gothic", "Nanum Pen Script", "Noto Sans KR", "Pretendard", "MacondoMacondo"],
     "close": "End",
     "save": "Save",
