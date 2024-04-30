@@ -27,6 +27,7 @@ class CretaFontClass {
       fontWeight: light,
       fontSize: 26,
       color: CretaColor.text,
+      height: 0.9,
     );
     headlineMedium = headlineSmall.copyWith(fontSize: 30);
     headlineLarge = headlineSmall.copyWith(fontSize: 40);
@@ -36,6 +37,7 @@ class CretaFontClass {
       fontWeight: medium,
       fontSize: 14,
       color: CretaColor.text,
+      height: 0.9,
     );
     titleMedium = titleSmall.copyWith(fontSize: 16);
     titleLarge = titleSmall.copyWith(fontSize: 20);
@@ -47,6 +49,7 @@ class CretaFontClass {
       fontWeight: medium,
       fontSize: 40,
       color: CretaColor.text,
+      height: 0.9,
     );
     displayMedium = displaySmall.copyWith(fontSize: 50);
     displayLarge = displaySmall.copyWith(fontSize: 60);
@@ -56,6 +59,7 @@ class CretaFontClass {
       fontWeight: regular,
       fontSize: 12,
       color: CretaColor.text,
+      height: 0.9,
     );
     bodySmall = bodyESmall.copyWith(fontSize: 14);
     bodyMedium = bodyESmall.copyWith(fontSize: 16);
@@ -66,6 +70,7 @@ class CretaFontClass {
       fontWeight: medium,
       fontSize: 11,
       color: CretaColor.text,
+      height: 0.9,
     );
     buttonMedium = buttonSmall.copyWith(fontSize: 13);
     buttonLarge = buttonSmall.copyWith(fontSize: 15);
@@ -75,6 +80,7 @@ class CretaFontClass {
       fontWeight: FontWeight.w400,
       fontSize: 16,
       color: Colors.white,
+      height: 0.9,
     );
   }
 
