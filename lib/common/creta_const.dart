@@ -6,7 +6,7 @@ class CretaConst {
   static const double orderVar = 0.0000001;
 
   static const double appbarHeight = 0;
-  static const double verticalAppbarWidth = 80;
+  static const double verticalAppbarWidth = 88;
 
   static const String bookPrefix = 'Book=';
   static const String pagePrefix = 'Page=';

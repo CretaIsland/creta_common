@@ -5,8 +5,13 @@ import 'dart:ui';
 import 'package:hycop/hycop.dart';
 import 'dart:js_interop';
 
+//
+// Use one of these valid types instead: JS types from 'dart:js_interop', ExternalDartReference, void, bool, num, double, int, String, extension types that erase to one of these types, '@staticInterop' types, 'dart:html' types when compiling to JS, or a type
+// parameter that is a subtype of a valid non-primitive type.
+//external String jsScreenshot(double x, double y, double width, double height);
+//                 ^
 @JS()
-external dynamic jsScreenshot(double x, double y, double width, double height);
+external String jsScreenshot(double x, double y, double width, double height);
 //external String jsScreenshot(double x, double y, double width, double height); // => for flutter-3.16.x
 
 class WindowScreenshot {
