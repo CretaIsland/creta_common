@@ -26,7 +26,7 @@ class WindowScreenshot {
       Offset offset = Offset.zero,
       Size size = const Size(210, 150)}) async {
     try {
-      print("Try screenshot !!!");
+      //print("Try screenshot !!!");
       // dynamic screenshot =
       //     await promiseToFuture(jsScreenshot(offset.dx, offset.dy, size.width, size.height));
       //dynamic screenshot = await jsScreenshot(offset.dx, offset.dy, size.width, size.height);
@@ -55,8 +55,7 @@ class WindowScreenshot {
       }));
       return completer.future;
     } catch (error) {
-      print("eror screenshot !!! $error");
-
+      //print("eror screenshot !!! $error");
       return '';
     }
     //return '';
