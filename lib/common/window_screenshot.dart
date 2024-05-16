@@ -40,7 +40,8 @@ class WindowScreenshot {
       //   }
       // }
       final completer = Completer<String>();
-      jsScreenshot(offset.dx, offset.dy, size.width, size.height, (screenshot) async {
+      jsScreenshot(offset.dx, offset.dy, size.width, size.height,
+          allowInterop((String screenshot) async {
         // Handle the result
         UriData screenshotBytes = Uri.parse(screenshot).data!;
         FileModel? result = await HycopFactory.storage!.uploadFile(
@@ -51,7 +52,7 @@ class WindowScreenshot {
         } else {
           completer.complete('');
         }
-      });
+      }));
       return completer.future;
     } catch (error) {
       print("eror screenshot !!! $error");
@@ -68,9 +69,9 @@ class WindowScreenshot {
       Size size = const Size(210, 150)}) async {
     final completer = Completer<Uint8List?>();
     try {
-      jsScreenshot(offset.dx, offset.dy, size.width, size.height, (screenshot) {
+      jsScreenshot(offset.dx, offset.dy, size.width, size.height, allowInterop((String screenshot) {
         completer.complete(Uri.parse(screenshot).data!.contentAsBytes());
-      });
+      }));
       // dynamic screenshot =
       //     await promiseToFuture(jsScreenshot(offset.dx, offset.dy, size.width, size.height));
       // if (screenshot != null) {
