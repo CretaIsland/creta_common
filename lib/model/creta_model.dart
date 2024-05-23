@@ -30,11 +30,15 @@ class CretaModel extends AbsExModel {
       if (lineCount > 0) {
         retval += ',\n';
       }
-      String value = entry.value.toString().replaceAll('"', '\\"').replaceAll('\n', ' ');
-      // .replaceAll(']', '\\]')
-      // .replaceAll('{', '\\{')
-      // .replaceAll('}', '\\}');
-      retval += '$tab\t"${entry.key}":"$value"';
+      if (entry.value is bool || entry.value is int || entry.value is double) {
+        retval += '$tab\t"${entry.key}": ${entry.value}';
+      } else {
+        String value = entry.value.toString().replaceAll('"', '\\"').replaceAll('\n', ' ');
+        // .replaceAll(']', '\\]')
+        // .replaceAll('{', '\\{')
+        // .replaceAll('}', '\\}');
+        retval += '$tab\t"${entry.key}":"$value"';
+      }
       lineCount++;
     }
     return retval;
