@@ -17,6 +17,7 @@
 import 'package:flutter/material.dart';
 
 import '../lang/creta_lang.dart';
+import '../common/creta_vars.dart';
 
 enum ServiceType {
   none,
@@ -31,6 +32,27 @@ enum ServiceType {
 
   static int validCheck(int val) => (val > end.index || val < none.index) ? none.index : val;
   static ServiceType fromInt(int? val) => ServiceType.values[validCheck(val ?? none.index)];
+
+  static String defaultResolution() {
+    switch (CretaVars.serviceType) {
+      case ServiceType.presentaion:
+        return '1920x1080';
+      case ServiceType.signage:
+        return '1080x1080';
+      case ServiceType.board:
+        return '1920x1080';
+      case ServiceType.barricade:
+        return '360x28';
+      case ServiceType.escalator:
+        return '1920x1080';
+      case ServiceType.cdu:
+        return '1920x1080';
+      case ServiceType.etc:
+        return '1920x1080';
+      default:
+        return '1920x1080';
+    }
+  }
 }
 
 enum BookType {
