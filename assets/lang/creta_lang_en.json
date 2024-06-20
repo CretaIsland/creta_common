@@ -92,5 +92,10 @@
     "pageTransitionType": {"None": 0, "fading in": 1, "getting bigger": 2, "Sliding left and right": 3, "Sliding up and down": 4},
     "animationTypes": ["doesn't exist", "Fade In", "Flip", "wave", "blurring", "get bigger", "rotation", "Move left and right", "Move up and down"],
     "autoFontSize": "Adjust text size to frame size",
-    "autoFrameHeight": "Adjust frame size to text size"
+    "autoFrameHeight": "Adjust frame size to text size",
+
+    "Apply": "Apply",
+    "Yes": "Yes",
+
+    "End" : "End"
 }
