@@ -556,11 +556,13 @@ class CretaCommonUtils {
   }
 
   static int getItemColumnCount(double pageWidth, double itemMinWidth, double itemXGap) {
-    return (pageWidth < itemMinWidth) ? 1 : ((pageWidth + itemXGap) ~/ (itemMinWidth + itemXGap));
+    return (pageWidth < itemMinWidth)
+        ? 1
+        : ((pageWidth + itemXGap) / (itemMinWidth + itemXGap)).ceil();
   }
 
   static bool isValidEmail(String email) {
-    RegExp regex = RegExp(r'^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z]+$');
+    RegExp regex = RegExp(r'^[a-zA-Z0-9._]+@[a-zA-Z0-9]+\.[a-zA-Z]+$');
     return regex.hasMatch(email);
   }
 
