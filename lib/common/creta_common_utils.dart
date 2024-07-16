@@ -566,6 +566,25 @@ class CretaCommonUtils {
     return regex.hasMatch(email);
   }
 
+  static bool isPasswordSecure(String password) {
+    // 패스워드 길이 체크 (8자 이상)
+    if (password.length < 8) {
+      return false;
+    }
+
+    // 영문 대문자 포함 체크
+    bool hasUppercase = password.contains(RegExp(r'[A-Z]'));
+    // 영문 소문자 포함 체크
+    bool hasLowercase = password.contains(RegExp(r'[a-z]'));
+    // 숫자 포함 체크
+    bool hasDigits = password.contains(RegExp(r'[0-9]'));
+    // 특수문자 포함 체크
+    //bool hasSpecialCharacters = password.contains(RegExp(r'[!@#$%^&*(),.?":{}|<>]'));
+
+    // 모든 조건을 만족하는지 반환
+    return hasUppercase && hasLowercase && hasDigits; //&& hasSpecialCharacters;
+  }
+
   static Size? getSize(GlobalKey key) {
     RenderBox? box = key.currentContext?.findRenderObject() as RenderBox?;
     if (box == null) {
