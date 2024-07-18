@@ -1,8 +1,37 @@
 import 'dart:ui';
+// ignore: avoid_web_libraries_in_flutter
+import 'dart:html' as html;
+
 import '../model/app_enums.dart';
 
 class CretaVars {
   static ServiceType serviceType = ServiceType.signage;
+
+  static void initServiceType() {
+    var url = html.window.location.href;
+    var uri = Uri.parse(url);
+    var firstPartOfHost = uri.host.split('.').first;
+    switch (firstPartOfHost) {
+      case 'presentation':
+        CretaVars.serviceType = ServiceType.presentation;
+        break;
+      case 'barricade':
+        CretaVars.serviceType = ServiceType.barricade;
+        break;
+      case 'signage':
+        CretaVars.serviceType = ServiceType.signage;
+        break;
+      case 'escalator':
+        CretaVars.serviceType = ServiceType.escalator;
+        break;
+      case 'board':
+        CretaVars.serviceType = ServiceType.board;
+        break;
+      default:
+        CretaVars.serviceType = ServiceType.barricade;
+        break;
+    }
+  }
 
   static bool isCanvaskit = true;
   static bool isDeveloper = false;
