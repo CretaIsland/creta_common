@@ -34,7 +34,7 @@ enum ServiceType {
   static ServiceType fromInt(int? val) => ServiceType.values[validCheck(val ?? none.index)];
 
   static String defaultResolution() {
-    switch (CretaVars.serviceType) {
+    switch (CretaVars.instance.serviceType) {
       case ServiceType.presentation:
         return '1920x1080';
       case ServiceType.signage:

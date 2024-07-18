@@ -5,40 +5,48 @@ import 'dart:html' as html;
 import '../model/app_enums.dart';
 
 class CretaVars {
-  static ServiceType serviceType = ServiceType.signage;
+  static CretaVars? _instance;
+  static CretaVars get instance {
+    _instance ??= CretaVars();
+    _instance!._initServiceType();
+    return _instance!;
+  }
 
-  static void initServiceType() {
+  ServiceType _serviceType = ServiceType.signage;
+  ServiceType get serviceType => _serviceType;
+
+  void _initServiceType() {
     var url = html.window.location.href;
     var uri = Uri.parse(url);
     var firstPartOfHost = uri.host.split('.').first;
     switch (firstPartOfHost) {
       case 'presentation':
-        CretaVars.serviceType = ServiceType.presentation;
+        _serviceType = ServiceType.presentation;
         break;
       case 'barricade':
-        CretaVars.serviceType = ServiceType.barricade;
+        _serviceType = ServiceType.barricade;
         break;
       case 'signage':
-        CretaVars.serviceType = ServiceType.signage;
+        _serviceType = ServiceType.signage;
         break;
       case 'escalator':
-        CretaVars.serviceType = ServiceType.escalator;
+        _serviceType = ServiceType.escalator;
         break;
       case 'board':
-        CretaVars.serviceType = ServiceType.board;
+        _serviceType = ServiceType.board;
         break;
       default:
-        CretaVars.serviceType = ServiceType.barricade;
+        _serviceType = ServiceType.barricade;
         break;
     }
   }
 
-  static bool isCanvaskit = true;
-  static bool isDeveloper = false;
-  static Size displaySize = Size.zero;
+  bool isCanvaskit = true;
+  bool isDeveloper = false;
+  Size displaySize = Size.zero;
 
-  static BookType defaultBookType() {
-    switch (CretaVars.serviceType) {
+  BookType defaultBookType() {
+    switch (_serviceType) {
       case ServiceType.signage:
         return BookType.signage;
       case ServiceType.barricade:
@@ -58,8 +66,8 @@ class CretaVars {
     }
   }
 
-  static Size defaultSize() {
-    switch (CretaVars.serviceType) {
+  Size defaultSize() {
+    switch (_serviceType) {
       case ServiceType.signage:
         return const Size(1080, 1920);
       case ServiceType.barricade:
@@ -79,8 +87,8 @@ class CretaVars {
     }
   }
 
-  static Size defaultFrameSize() {
-    switch (CretaVars.serviceType) {
+  Size defaultFrameSize() {
+    switch (_serviceType) {
       case ServiceType.signage:
         return const Size(1080, 1920);
       case ServiceType.barricade:
@@ -100,8 +108,8 @@ class CretaVars {
     }
   }
 
-  static String serviceTypeString() {
-    switch (CretaVars.serviceType) {
+  String serviceTypeString() {
+    switch (_serviceType) {
       case ServiceType.signage:
         return "signage";
       case ServiceType.barricade:
