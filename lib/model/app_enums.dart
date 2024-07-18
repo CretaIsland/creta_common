@@ -21,7 +21,7 @@ import '../common/creta_vars.dart';
 
 enum ServiceType {
   none,
-  presentaion,
+  presentation,
   signage,
   board,
   barricade,
@@ -35,7 +35,7 @@ enum ServiceType {
 
   static String defaultResolution() {
     switch (CretaVars.serviceType) {
-      case ServiceType.presentaion:
+      case ServiceType.presentation:
         return '1920x1080';
       case ServiceType.signage:
         return '1080x1080';
@@ -57,7 +57,7 @@ enum ServiceType {
 
 enum BookType {
   none,
-  presentaion,
+  presentation,
   signage,
   board,
   barricade,
