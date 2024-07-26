@@ -532,7 +532,7 @@ class CretaCommonUtils {
     if (font == CretaLang['fontNotoSerifJP']!) {
       return "NotoSerifJP";
     }
-    if (font == CretaLang['Pretendard']!) {
+    if (font == CretaLang['fontPretendard']!) {
       return "Pretendard";
     }
     if (font == CretaLang['fontNanum_Myeongjo']!) {
