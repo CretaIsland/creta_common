@@ -522,14 +522,19 @@ class CretaCommonUtils {
     if (font == "Macondo") {
       return CretaLang['fontMacondo']!;
     }
-    return CretaLang['fontPretendard']!;
+    if (font == "Pretendard") {
+      return CretaLang['fontPretendard']!;
+    }
+    return CretaLang['fontNotoSans']!;
   }
 
   static String getFontFamily(String font) {
     if (font == CretaLang['fontNotoSerifJP']!) {
       return "NotoSerifJP";
     }
-
+    if (font == CretaLang['Pretendard']!) {
+      return "Pretendard";
+    }
     if (font == CretaLang['fontNanum_Myeongjo']!) {
       return "NanumMyeongjo";
     }
@@ -552,7 +557,7 @@ class CretaCommonUtils {
       return "Macondo";
     }
 
-    return "Pretendard";
+    return "NotoSans";
   }
 
   static int getItemColumnCount(double pageWidth, double itemMinWidth, double itemXGap) {
