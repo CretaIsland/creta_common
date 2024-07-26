@@ -56,6 +56,7 @@
     "fontColor": "文字色",
     "fontAI": "AI機能",
     "iconColor": "アイコン色",
+    "fontNotoSans": "NotoSans",
     "fontNanum_Myeongjo": "Myeongjo",
     "fontJua": "Jua",
     "fontNanum_Gothic": "Gothic",
@@ -64,7 +65,7 @@
     "fontPretendard": "Pretendard",
     "fontMacondo": "Macondo",
     "fontNotoSerifJP": "NotoSerifJP",
-    "fontStringList": ["Myeongjo", "Jua", "Gothic", "Pen Script", "NotoSansKR", "Pretendard", "NotoSerifJP", "MMacondo"],
+    "fontStringList": ["NotoSans", "Myeongjo", "Jua", "Gothic", "Pen Script", "NotoSansKR", "Pretendard", "NotoSerifJP", "MMacondo"],
 
     "close": "終了",
     "save": "保存",
