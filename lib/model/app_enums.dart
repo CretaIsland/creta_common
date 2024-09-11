@@ -53,6 +53,17 @@ enum ServiceType {
         return '1920x1080';
     }
   }
+
+  static ServiceType fromString(String arg) {
+    if (arg == 'presentation') return ServiceType.presentation;
+    if (arg == 'signage') return ServiceType.signage;
+    if (arg == 'board') return ServiceType.board;
+    if (arg == 'barricade') return ServiceType.barricade;
+    if (arg == 'escalator') return ServiceType.escalator;
+    if (arg == 'cdu') return ServiceType.cdu;
+    if (arg == 'etc') return ServiceType.etc;
+    return ServiceType.signage;
+  }
 }
 
 enum BookType {
