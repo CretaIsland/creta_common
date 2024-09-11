@@ -16,29 +16,33 @@ class CretaVars {
   ServiceType get serviceType => _serviceType;
 
   void _initServiceType() {
-    var url = html.window.location.href;
-    var uri = Uri.parse(url);
-    var firstPartOfHost = uri.host.split('.').first;
-    switch (firstPartOfHost) {
-      case 'presentation':
-        _serviceType = ServiceType.presentation;
-        break;
-      case 'barricade':
-        _serviceType = ServiceType.barricade;
-        break;
-      case 'signage':
-        _serviceType = ServiceType.signage;
-        break;
-      case 'escalator':
-        _serviceType = ServiceType.escalator;
-        break;
-      case 'board':
-        _serviceType = ServiceType.board;
-        break;
-      default:
-        _serviceType = ServiceType.barricade;
-        break;
-    }
+
+     String arg = String.fromEnvironment('serviceType', defaultValue: 'signage');
+   _serviceType = ServiceType.fromString(arg);
+
+    // var url = html.window.location.href;
+    // var uri = Uri.parse(url);
+    // var firstPartOfHost = uri.host.split('.').first;
+    // switch (firstPartOfHost) {
+    //   case 'presentation':
+    //     _serviceType = ServiceType.presentation;
+    //     break;
+    //   case 'barricade':
+    //     _serviceType = ServiceType.barricade;
+    //     break;
+    //   case 'signage':
+    //     _serviceType = ServiceType.signage;
+    //     break;
+    //   case 'escalator':
+    //     _serviceType = ServiceType.escalator;
+    //     break;
+    //   case 'board':
+    //     _serviceType = ServiceType.board;
+    //     break;
+    //   default:
+    //     _serviceType = ServiceType.barricade;
+    //     break;
+    // }
   }
 
   bool isCanvaskit = true;
