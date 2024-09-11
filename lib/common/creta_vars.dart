@@ -16,7 +16,7 @@ class CretaVars {
   ServiceType get serviceType => _serviceType;
 
   void _initServiceType() {
-    String arg = const String.fromEnvironment('serviceType', defaultValue: 'signage');
+    const String arg = String.fromEnvironment('serviceType', defaultValue: 'signage');
     _serviceType = ServiceType.fromString(arg);
 
     // var url = html.window.location.href;
