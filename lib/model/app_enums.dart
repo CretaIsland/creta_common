@@ -903,7 +903,7 @@ enum LinkIconType {
   static IconData toIcon(LinkIconType iconType) {
     switch (iconType) {
       case none:
-        return Icons.radio_button_checked_outlined;
+        return Icons.link_outlined;
       case link:
         return Icons.link_outlined;
       case circle2:
@@ -957,7 +957,7 @@ enum LinkIconType {
       case down:
         return Icons.arrow_downward_outlined;
       default:
-        return Icons.radio_button_checked_outlined;
+        return Icons.link_outlined;
     }
   }
 }
