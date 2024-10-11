@@ -869,6 +869,7 @@ enum CommunityChannelType {
 
 enum LinkIconType {
   none,
+  link,
   circle2,
   dots,
   star1,
@@ -888,6 +889,12 @@ enum LinkIconType {
   warn2,
   info1,
   info2,
+  logout,
+  home,
+  back,
+  forward,
+  up,
+  down,
   end;
 
   static int validCheck(int val) => (val > end.index || val < none.index) ? none.index : val;
@@ -897,6 +904,8 @@ enum LinkIconType {
     switch (iconType) {
       case none:
         return Icons.radio_button_checked_outlined;
+      case link:
+        return Icons.link_outlined;
       case circle2:
         return Icons.radio_button_checked_outlined;
       case dots:
@@ -935,6 +944,18 @@ enum LinkIconType {
         return Icons.info_outlined;
       case info2:
         return Icons.help_outline_outlined;
+      case logout:
+        return Icons.logout_outlined;
+      case home:
+        return Icons.home_outlined;
+      case back:
+        return Icons.arrow_back_outlined;
+      case forward:
+        return Icons.arrow_forward_outlined;
+      case up:
+        return Icons.arrow_upward_outlined;
+      case down:
+        return Icons.arrow_downward_outlined;
       default:
         return Icons.radio_button_checked_outlined;
     }
