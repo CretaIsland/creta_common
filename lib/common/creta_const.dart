@@ -3,6 +3,12 @@
 import 'package:flutter/material.dart';
 
 class CretaConst {
+  static const String notLoginUserEmail = 'notloginuserid@sqisoft.com';
+  static const String notLoginUserName = 'notloginuser';
+  static const String notLoginUserTeam = 'notloginuserid Team';
+  static const String superAdmin = 'creta';
+  static const String superAdminEmail = 'cretacreates@gmail.com';
+
   static const double orderVar = 0.0000001;
 
   static const double appbarHeight = 0;
