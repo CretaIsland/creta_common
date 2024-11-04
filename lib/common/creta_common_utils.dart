@@ -4,7 +4,9 @@ import 'dart:convert';
 import 'dart:math';
 import 'dart:typed_data';
 import 'dart:ui' as ui;
-import 'dart:html' as html;
+
+import './utils/save_log_file_io.dart'
+    if (dart.library.js_interop) './utils/save_log_file_web.dart';
 
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
@@ -826,14 +828,10 @@ class CretaCommonUtils {
     }
   }
 
+  // 멀티 플랫폼 작업
   static void saveLogToFile(String logData, String outFileName,
       {String folder = "download"}) {
-    final blob = html.Blob([logData]);
-    final url = html.Url.createObjectUrlFromBlob(blob);
-    html.AnchorElement(href: url)
-      ..setAttribute(folder, outFileName)
-      ..click();
-    html.Url.revokeObjectUrl(url);
+    SaveLogFile.saveLogToFile(logData, outFileName, folder: folder);
   }
 
   static Widget underConstruction(
