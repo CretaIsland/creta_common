@@ -3,7 +3,7 @@ import 'dart:async';
 //import 'dart:js_util';
 import 'dart:typed_data';
 import 'dart:ui';
-import 'package:hycop/hycop.dart';
+import 'package:hycop_multi_platform/hycop.dart';
 //import 'dart:js_interop';
 import 'package:js/js.dart';
 //
@@ -45,8 +45,11 @@ class WindowScreenshot {
         // Handle the result
         UriData screenshotBytes = Uri.parse(screenshot).data!;
         FileModel? result = await HycopFactory.storage!.uploadFile(
-            '${bookId}_thumbnail.png', screenshotBytes.mimeType, screenshotBytes.contentAsBytes(),
-            makeThumbnail: false, usageType: 'bookThumbnail');
+            '${bookId}_thumbnail.png',
+            screenshotBytes.mimeType,
+            screenshotBytes.contentAsBytes(),
+            makeThumbnail: false,
+            usageType: 'bookThumbnail');
         if (result != null) {
           completer.complete(result.url);
         } else {
@@ -68,7 +71,8 @@ class WindowScreenshot {
       Size size = const Size(210, 150)}) async {
     final completer = Completer<Uint8List?>();
     try {
-      jsScreenshot(offset.dx, offset.dy, size.width, size.height, allowInterop((String screenshot) {
+      jsScreenshot(offset.dx, offset.dy, size.width, size.height,
+          allowInterop((String screenshot) {
         completer.complete(Uri.parse(screenshot).data!.contentAsBytes());
       }));
       // dynamic screenshot =

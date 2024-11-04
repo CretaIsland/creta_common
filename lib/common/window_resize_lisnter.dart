@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:hycop/hycop.dart';
+import 'package:hycop_multi_platform/hycop.dart';
 import 'package:mutex/mutex.dart';
 
 class WindowResizeListner with WidgetsBindingObserver {
@@ -14,7 +14,9 @@ class WindowResizeListner with WidgetsBindingObserver {
   int resizeDuration;
 
   WindowResizeListner(
-      {required this.onReizeComplete, this.onReizeStart, this.resizeDuration = 100});
+      {required this.onReizeComplete,
+      this.onReizeStart,
+      this.resizeDuration = 100});
 
   bool isResizing() {
     bool retval = false;
@@ -45,7 +47,8 @@ class WindowResizeListner with WidgetsBindingObserver {
   void _timerFunction(Timer timer) {
     var now = DateTime.now();
     if (_lastResizingTime != null &&
-        now.millisecondsSinceEpoch - _lastResizingTime!.millisecondsSinceEpoch < resizeDuration) {
+        now.millisecondsSinceEpoch - _lastResizingTime!.millisecondsSinceEpoch <
+            resizeDuration) {
       logger.finest('Resizing now');
       _lock.acquire();
       _isResizing = true;

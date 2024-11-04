@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hycop/common/util/logger.dart';
+import 'package:hycop_multi_platform/common/util/logger.dart';
 
 abstract class CretaState<T extends StatefulWidget> extends State<T> {
   void invalidate() {
@@ -12,7 +12,8 @@ abstract class CretaState<T extends StatefulWidget> extends State<T> {
 }
 
 class KeyHandler {
-  final Map<String, GlobalObjectKey<CretaState<StatefulWidget>>> _widgetMap = {};
+  final Map<String, GlobalObjectKey<CretaState<StatefulWidget>>> _widgetMap =
+      {};
 
   GlobalObjectKey<CretaState<StatefulWidget>> registerKey(String keyString) {
     GlobalObjectKey<CretaState<StatefulWidget>>? retval = _widgetMap[keyString];
@@ -110,7 +111,7 @@ class KeyHandler {
     return false;
   }
 
-   bool doSomething(String keyString, dynamic params) {
+  bool doSomething(String keyString, dynamic params) {
     GlobalObjectKey<CretaState<StatefulWidget>>? key = findKey(keyString);
     if (key != null) {
       if (key.currentState != null) {
