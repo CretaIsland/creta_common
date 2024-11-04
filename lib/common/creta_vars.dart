@@ -1,6 +1,6 @@
 import 'dart:ui';
 // ignore: avoid_web_libraries_in_flutter
-import 'dart:html' as html;
+//import 'dart:html' as html;
 
 import '../model/app_enums.dart';
 
@@ -16,7 +16,8 @@ class CretaVars {
   ServiceType get serviceType => _serviceType;
 
   void _initServiceType() {
-    const String arg = String.fromEnvironment('serviceType', defaultValue: 'signage');
+    const String arg =
+        String.fromEnvironment('serviceType', defaultValue: 'signage');
     _serviceType = ServiceType.fromString(arg);
 
     // var url = html.window.location.href;
