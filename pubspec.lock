@@ -193,22 +193,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.8"
-  device_info_plus:
-    dependency: transitive
-    description:
-      name: device_info_plus
-      sha256: a7fd703482b391a87d60b6061d04dfdeab07826b96f9abd8f5ed98068acc0074
-      url: "https://pub.dev"
-    source: hosted
-    version: "10.1.2"
-  device_info_plus_platform_interface:
-    dependency: transitive
-    description:
-      name: device_info_plus_platform_interface
-      sha256: "282d3cf731045a2feb66abfe61bbc40870ae50a3ed10a4d3d217556c35c8c2ba"
-      url: "https://pub.dev"
-    source: hosted
-    version: "7.0.1"
   encrypt:
     dependency: transitive
     description:
@@ -475,12 +459,11 @@ packages:
   hycop_multi_platform:
     dependency: "direct main"
     description:
-      path: "."
-      ref: main
-      resolved-ref: "25eafbe2fad65fa84e392930bbd02a304f594047"
-      url: "https://github.com/CretaIsland/hycop_multi_platform.git"
-    source: git
-    version: "0.5.01"
+      name: hycop_multi_platform
+      sha256: "8383b7c651c10f56f283685c15f87174fc952b630ebeb5ff2a5c5f189e1b09ff"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.6.0"
   image:
     dependency: "direct main"
     description:
@@ -1086,22 +1069,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.0.1"
-  win32:
-    dependency: transitive
-    description:
-      name: win32
-      sha256: "84ba388638ed7a8cb3445a320c8273136ab2631cd5f2c57888335504ddab1bc2"
-      url: "https://pub.dev"
-    source: hosted
-    version: "5.8.0"
-  win32_registry:
-    dependency: transitive
-    description:
-      name: win32_registry
-      sha256: "21ec76dfc731550fd3e2ce7a33a9ea90b828fdf19a5c3bcf556fa992cfa99852"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.1.5"
   xdg_directories:
     dependency: transitive
     description:
