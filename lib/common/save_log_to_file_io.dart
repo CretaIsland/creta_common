@@ -15,3 +15,7 @@ void saveLogToFile(String logData, String outFileName, {String folder = "downloa
 
   //print('Log saved to $filePath');
 }
+
+Future<List<int>> extractBytesFromFile(dynamic param) async {
+  throw UnsupportedError('extractBytesFromFile is not supported on this platform');
+}
