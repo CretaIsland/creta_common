@@ -12,7 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
   #hycop: ^0.4.75
-  hycop_multi_platform: ^0.6.0
+  hycop_multi_platform: ^0.6.1
     # git:
     #   url: https://github.com/CretaIsland/hycop_multi_platform.git
     #   ref: main # 또는 사용하고 싶은 특정 브랜치, 태그, 커밋

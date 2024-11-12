@@ -460,10 +460,10 @@ packages:
     dependency: "direct main"
     description:
       name: hycop_multi_platform
-      sha256: "8383b7c651c10f56f283685c15f87174fc952b630ebeb5ff2a5c5f189e1b09ff"
+      sha256: b9aed4f8226748ef3ca78c1babdb2d65ac295478cae343a7e29a87c267f0fb54
       url: "https://pub.dev"
     source: hosted
-    version: "0.6.0"
+    version: "0.6.1"
   image:
     dependency: "direct main"
     description:
