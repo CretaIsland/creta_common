@@ -13,8 +13,7 @@ import 'package:image/image.dart' as img;
 import '../lang/creta_lang.dart';
 import 'creta_const.dart';
 
-import 'save_log_to_file_io.dart'
-    if (dart.library.html) 'save_log_to_file_web.dart' as savelog;
+import 'save_log_to_file_io.dart' if (dart.library.html) 'save_log_to_file_web.dart' as savelog;
 
 class CretaCommonUtils {
   static DateTime debugTime = DateTime.now();
@@ -134,10 +133,7 @@ class CretaCommonUtils {
   }
 
   static String getNowString(
-      {String deli1 = '/',
-      String deli2 = ' ',
-      String deli3 = ':',
-      String deli4 = '.'}) {
+      {String deli1 = '/', String deli2 = ' ', String deli3 = ':', String deli4 = '.'}) {
     var now = DateTime.now();
     String name = '${now.year}';
     name += deli1;
@@ -177,8 +173,7 @@ class CretaCommonUtils {
   //   return name;
   // }
 
-  static Color? string2Color(String? colorStr,
-      {String defaultValue = 'Color(0xFFFFFFFF)'}) {
+  static Color? string2Color(String? colorStr, {String defaultValue = 'Color(0xFFFFFFFF)'}) {
     if (defaultValue.isEmpty) {
       if (colorStr == null || colorStr.length < 16) {
         return null;
@@ -251,8 +246,7 @@ class CretaCommonUtils {
     if (hexString.length >= 6) {
       if (hexString[0] == '#') {
         if (hexString.length == 7) {
-          return Color(
-              int.parse(hexString.replaceFirst('#', '0x$alphaChannel')));
+          return Color(int.parse(hexString.replaceFirst('#', '0x$alphaChannel')));
         }
         return Color(int.parse(hexString.replaceFirst('#', '0x')));
       } else {
@@ -266,25 +260,21 @@ class CretaCommonUtils {
   }
 
   static Size getSizeByKey(GlobalKey widgetKey) {
-    final RenderBox? box =
-        widgetKey.currentContext?.findRenderObject() as RenderBox?;
+    final RenderBox? box = widgetKey.currentContext?.findRenderObject() as RenderBox?;
     if (box == null) return Size.zero;
     //final Offset offset = box.localToGlobal(Offset.zero);
     return box.size;
   }
 
   static (Offset?, Size?) getBoxByKey(GlobalKey widgetKey) {
-    final RenderBox? box =
-        widgetKey.currentContext?.findRenderObject() as RenderBox?;
+    final RenderBox? box = widgetKey.currentContext?.findRenderObject() as RenderBox?;
     if (box == null) return (null, null);
     final Offset offset = box.localToGlobal(Offset.zero);
     return (offset, box.size);
   }
 
-  static bool isMousePointerOnWidget(
-      GlobalKey widgetKey, Offset pointerPosition) {
-    final RenderBox? box =
-        widgetKey.currentContext?.findRenderObject() as RenderBox?;
+  static bool isMousePointerOnWidget(GlobalKey widgetKey, Offset pointerPosition) {
+    final RenderBox? box = widgetKey.currentContext?.findRenderObject() as RenderBox?;
     if (box == null) return false;
 
     final Offset widgetOffset = box.localToGlobal(Offset.zero);
@@ -296,10 +286,8 @@ class CretaCommonUtils {
         pointerPosition.dy < widgetOffset.dy + size.height;
   }
 
-  static bool isPointInsideWidget(
-      GlobalKey widgetKey, Offset point, double margin) {
-    final RenderBox? widgetBox =
-        widgetKey.currentContext?.findRenderObject() as RenderBox?;
+  static bool isPointInsideWidget(GlobalKey widgetKey, Offset point, double margin) {
+    final RenderBox? widgetBox = widgetKey.currentContext?.findRenderObject() as RenderBox?;
     if (widgetBox != null) {
       //final Offset localOffset = widgetBox.globalToLocal(point);
       //logger.finest('localOffset = $localOffset');
@@ -309,8 +297,7 @@ class CretaCommonUtils {
       final Rect widgetRect = MatrixUtils.transformRect(
           widgetBox.getTransformTo(null),
           Offset(-margin / 2, -margin / 2) &
-              Size(widgetBox.size.width + margin / 2,
-                  widgetBox.size.height + margin / 2));
+              Size(widgetBox.size.width + margin / 2, widgetBox.size.height + margin / 2));
       //return widgetRect.contains(localOffset);
 
       // final Rect marginPlusRect = Offset(widgetRect.left - margin, widgetRect.top - margin) &
@@ -574,8 +561,7 @@ class CretaCommonUtils {
     return "NotoSans";
   }
 
-  static int getItemColumnCount(
-      double pageWidth, double itemMinWidth, double itemXGap) {
+  static int getItemColumnCount(double pageWidth, double itemMinWidth, double itemXGap) {
     return (pageWidth < itemMinWidth)
         ? 1
         : ((pageWidth + itemXGap) / (itemMinWidth + itemXGap)).ceil();
@@ -640,8 +626,7 @@ class CretaCommonUtils {
   }
 
   static bool isRectContained(Rect outerRect, Rect innerRect) {
-    return outerRect.contains(innerRect.topLeft) &&
-        outerRect.contains(innerRect.bottomRight);
+    return outerRect.contains(innerRect.topLeft) && outerRect.contains(innerRect.bottomRight);
   }
 
   // json 에서 문자열을 name 항목의 추출하는 함수
@@ -678,8 +663,7 @@ class CretaCommonUtils {
 
 // 텍스트가 차이하는 실제 화면상의 사이즈를 구해준다.
 
-  static TextPainter getTextPainter(
-      String text, TextStyle? style, TextAlign? align) {
+  static TextPainter getTextPainter(String text, TextStyle? style, TextAlign? align) {
     final span = TextSpan(text: text, style: style);
     // final words = span.toPlainText().split(RegExp('\\s+'));
     // final wordspan = TextSpan(
@@ -757,8 +741,8 @@ class CretaCommonUtils {
   // }
 
   // image crop
-  static Uint8List cropImage(Uint8List sourceImgBytes, Offset cropOffset,
-      double ratio, Size frameSize) {
+  static Uint8List cropImage(
+      Uint8List sourceImgBytes, Offset cropOffset, double ratio, Size frameSize) {
     int cropWidth = 0;
     int cropHeight = 0;
 
@@ -829,15 +813,12 @@ class CretaCommonUtils {
   }
 
   // 멀티 플랫폼 작업
-  static void saveLogToFile(String logData, String outFileName,
-      {String folder = "download"}) {
+  static void saveLogToFile(String logData, String outFileName, {String folder = "download"}) {
     savelog.saveLogToFile(logData, outFileName);
   }
 
   static Widget underConstruction(
-      {required double width,
-      required double height,
-      EdgeInsetsGeometry? padding}) {
+      {required double width, double? height, EdgeInsetsGeometry? padding}) {
     return
         // Positioned.fill(
         //   child:
@@ -849,7 +830,7 @@ class CretaCommonUtils {
       child: Center(
         child: Image(
           image: const AssetImage('assets/underConstruction.gif'),
-          height: min(width, height) - 50,
+          height: height != null ? min(width, height) - 50 : width - 50,
         ),
       ),
       //),
@@ -908,8 +889,7 @@ class CretaCommonUtils {
 
     while (maxFontSize - minFontSize > delta) {
       currentSize = (minFontSize + maxFontSize) / 2;
-      textPainter.text =
-          TextSpan(text: text, style: style.copyWith(fontSize: currentSize));
+      textPainter.text = TextSpan(text: text, style: style.copyWith(fontSize: currentSize));
       textPainter.layout(maxWidth: containerWidth);
 
       if (textPainter.size.height > containerHeight) {
@@ -922,8 +902,7 @@ class CretaCommonUtils {
     return currentSize;
   }
 
-  static Future<Map<String, dynamic>> readJsonFromAssets(
-      String fileName) async {
+  static Future<Map<String, dynamic>> readJsonFromAssets(String fileName) async {
     final response = await http.get(Uri.parse('assets/$fileName'));
 
     if (response.statusCode == 200) {
