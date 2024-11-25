@@ -39,3 +39,28 @@ Future<void> downloadImage(String urlImage, String bucketId, String mediaApiUrl)
   //   //debugPrint(res.body);
   // });
 }
+
+String getFirstPath() {
+  throw UnsupportedError('extractBytesFromFile is not supported on this platform');
+  // Uri uri = Uri.parse(html.window.location.href);
+  // // URL의 경로 세그먼트를 가져옵니다.
+  // List<String> pathSegments = uri.pathSegments;
+  // // 첫 번째 디렉토리 이름을 반환합니다. 경로가 없거나 첫 번째 디렉토리가 없는 경우 빈 문자열을 반환합니다.
+  // return pathSegments.isNotEmpty ? pathSegments[0] : '';
+}
+
+String getFirstTokenBeforeDot() {
+  throw UnsupportedError('extractBytesFromFile is not supported on this platform');
+  // // if (firstAddress.isNotEmpty) {
+  // //   return firstAddress;
+  // // }
+  // Uri uri = Uri.parse(html.window.location.href);
+  // String host = uri.host;
+  // int dotIndex = host.indexOf('.');
+  // if (dotIndex != -1) {
+  //   // firstAddress = host.substring(0, dotIndex);
+  //   // return firstAddress;
+  //   return host.substring(0, dotIndex);
+  // }
+  // return ''; // 점이 없는 경우 빈 문자열을 반환합니다.
+}
