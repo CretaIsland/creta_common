@@ -6,11 +6,39 @@
     "properties": "properties",
     "mute": "no sound/present",
     "cantGoBack": "You cannot use GoBack. Press the back button at the bottom.",
-    "basicBookFilter": ["All", "presentation", "blackboard", "digital signage", "digital barricade", "etc"],
-    "basicBookSortFilter": ["Newest", "By name", "In order of likes", "View order"],
-    "basicBookPermissionFilter": ["all", "owner", "editor", "View a"],
-    "publishBookPermissionFilter": ["Read permission", "Copy Permission"],
-    "accountMenu": ["my page", "Team Switch", "log out", "Help", "Version Information", "Developer Mode", "Disable developer mode"],
+    "basicBookFilter": [
+        "All",
+        "presentation",
+        "blackboard",
+        "digital signage",
+        "digital barricade",
+        "etc"
+    ],
+    "basicBookSortFilter": [
+        "Newest",
+        "By name",
+        "In order of likes",
+        "View order"
+    ],
+    "basicBookPermissionFilter": [
+        "all",
+        "owner",
+        "editor",
+        "View a"
+    ],
+    "publishBookPermissionFilter": [
+        "Read permission",
+        "Copy Permission"
+    ],
+    "accountMenu": [
+        "my page",
+        "Team Switch",
+        "log out",
+        "Help",
+        "Version Information",
+        "Developer Mode",
+        "Disable developer mode"
+    ],
     "makeCopy": "Make a copy",
     "open": "Back to list",
     "printCommand": "Print",
@@ -40,8 +68,29 @@
     "signUp": "Sign up",
     "home": "Go to Crete homepage",
     "noAuth": "You do not have permission to open the document",
-    "contentsTypeString": ["doesn't exist", "video", "image", "text", "YouTube", "effect", "sticker", "music", "weather", "news", "Document", "datasheet", "PDF", "3D", "Web", "Stream", "end"],
-    "dailyEnglish": ["Quote\nof the day", "Word\nof the day"],
+    "contentsTypeString": [
+        "doesn't exist",
+        "video",
+        "image",
+        "text",
+        "YouTube",
+        "effect",
+        "sticker",
+        "music",
+        "weather",
+        "news",
+        "Document",
+        "datasheet",
+        "PDF",
+        "3D",
+        "Web",
+        "Stream",
+        "end"
+    ],
+    "dailyEnglish": [
+        "Quote\nof the day",
+        "Word\nof the day"
+    ],
     "deleteConfirmTitle": "Confirm deletion",
     "deleteConfirm": "Do you really want to delete?",
     "contentsDeleted": "Contents have been deleted",
@@ -64,9 +113,18 @@
     "fontNoto_Sans_KR": "NotoSansKR",
     "fontPretendard": "Pretendard",
     "fontMacondo": "Macondo",
-    "fontNotoSerifJP": "NotoSerifJP",
-    "fontStringList": ["NotoSans", "Myeongjo", "Jua", "Gothic", "Pen Script", "NotoSansKR", "Pretendard", "NotoSerifJP", "MMacondo"],
-
+    "fontNoto_Sans_JP": "NotoSansJP",
+    "fontStringList": [
+        "NotoSans",
+        "Myeongjo",
+        "Jua",
+        "Gothic",
+        "Pen Script",
+        "NotoSansKR",
+        "Pretendard",
+        "NotoSansJP",
+        "MMacondo"
+    ],
     "close": "End",
     "save": "Save",
     "remove": "Delete",
@@ -89,14 +147,34 @@
     "noNamepage": "Page without name",
     "noNameframe": "Frame without name",
     "sampleBookName": "Nameless Cretan Book",
-    "pageTransitionType2": {"None": 0, "fades away": 1, "getting smaller": 2, "Sliding left and right": 3, "Sliding up and down": 4},
-    "pageTransitionType": {"None": 0, "fading in": 1, "getting bigger": 2, "Sliding left and right": 3, "Sliding up and down": 4},
-    "animationTypes": ["doesn't exist", "Fade In", "Flip", "wave", "blurring", "get bigger", "rotation", "Move left and right", "Move up and down"],
+    "pageTransitionType2": {
+        "None": 0,
+        "fades away": 1,
+        "getting smaller": 2,
+        "Sliding left and right": 3,
+        "Sliding up and down": 4
+    },
+    "pageTransitionType": {
+        "None": 0,
+        "fading in": 1,
+        "getting bigger": 2,
+        "Sliding left and right": 3,
+        "Sliding up and down": 4
+    },
+    "animationTypes": [
+        "doesn't exist",
+        "Fade In",
+        "Flip",
+        "wave",
+        "blurring",
+        "get bigger",
+        "rotation",
+        "Move left and right",
+        "Move up and down"
+    ],
     "autoFontSize": "Adjust text size to frame size",
     "autoFrameHeight": "Adjust frame size to text size",
-
     "Apply": "Apply",
     "Yes": "Yes",
-
-    "End" : "End"
+    "End": "End"
 }

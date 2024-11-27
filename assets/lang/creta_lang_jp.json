@@ -6,11 +6,39 @@
     "properties": "プロパティ",
     "mute": "音なし/あり",
     "cantGoBack": "戻るは使用できません。下部の背面ボタンを押してください。",
-    "basicBookFilter": ["用途別（全体）", "プレゼンテーション用", "戦車黒板用", "デジタルサイネージ用", "デジタルバリケード用", "その他"],
-    "basicBookSortFilter": ["最新順", "名前順", "いいね", "照会手順"],
-    "basicBookPermissionFilter": ["権限別（全体）", "所有者", "編集者", "ビューア"],
-    "publishBookPermissionFilter": ["読む権利", "コピー権"],
-    "accountMenu": ["マイページ", "チーム転換", "ログアウト", "ヘルプ", "バージョン情報", "開発者モード", "開発者モード解除"],
+    "basicBookFilter": [
+        "用途別（全体）",
+        "プレゼンテーション用",
+        "戦車黒板用",
+        "デジタルサイネージ用",
+        "デジタルバリケード用",
+        "その他"
+    ],
+    "basicBookSortFilter": [
+        "最新順",
+        "名前順",
+        "いいね",
+        "照会手順"
+    ],
+    "basicBookPermissionFilter": [
+        "権限別（全体）",
+        "所有者",
+        "編集者",
+        "ビューア"
+    ],
+    "publishBookPermissionFilter": [
+        "読む権利",
+        "コピー権"
+    ],
+    "accountMenu": [
+        "マイページ",
+        "チーム転換",
+        "ログアウト",
+        "ヘルプ",
+        "バージョン情報",
+        "開発者モード",
+        "開発者モード解除"
+    ],
     "makeCopy": "コピーの作成",
     "open": "リストに戻る",
     "printCommand": "印刷",
@@ -40,8 +68,29 @@
     "signUp": "会員登録",
     "home": "クレタのホームページに行く",
     "noAuth": "ドキュメントを開く権限がありません",
-    "contentsTypeString": ["なし", "ビデオ", "イメージ", "テキスト", "YouTube", "効果", "ステッカー", "ミュージック", "天気", "ニュース", "書類", "データシート", "PDF", "3D", "ウェブ", "ストリーム", "終わり"],
-    "dailyEnglish": ["今日の\n名言", "今日の\n単語"],
+    "contentsTypeString": [
+        "なし",
+        "ビデオ",
+        "イメージ",
+        "テキスト",
+        "YouTube",
+        "効果",
+        "ステッカー",
+        "ミュージック",
+        "天気",
+        "ニュース",
+        "書類",
+        "データシート",
+        "PDF",
+        "3D",
+        "ウェブ",
+        "ストリーム",
+        "終わり"
+    ],
+    "dailyEnglish": [
+        "今日の\n名言",
+        "今日の\n単語"
+    ],
     "deleteConfirmTitle": "削除の確認",
     "deleteConfirm": "本当に削除しますか？",
     "contentsDeleted": "コンテンツが削除されました",
@@ -64,9 +113,18 @@
     "fontNoto_Sans_KR": "NotoSansKR",
     "fontPretendard": "Pretendard",
     "fontMacondo": "Macondo",
-    "fontNotoSerifJP": "NotoSerifJP",
-    "fontStringList": ["NotoSans", "Myeongjo", "Jua", "Gothic", "Pen Script", "NotoSansKR", "Pretendard", "NotoSerifJP", "MMacondo"],
-
+    "fontNoto_Sans_JP": "NotoSansJP",
+    "fontStringList": [
+        "NotoSans",
+        "Myeongjo",
+        "Jua",
+        "Gothic",
+        "Pen Script",
+        "NotoSansKR",
+        "Pretendard",
+        "NotoSansJP",
+        "MMacondo"
+    ],
     "close": "終了",
     "save": "保存",
     "remove": "削除",
@@ -89,14 +147,34 @@
     "noNamepage": "名前のないページ",
     "noNameframe": "名前のないフレーム",
     "sampleBookName": "名前のないクレタブック",
-    "pageTransitionType2": {"なし": 0, "徐々に消える": 1, "ますます小さくする": 2, "左右のスライド": 3, "上下スライド": 4},
-    "pageTransitionType": {"なし": 0, "徐々に現れる": 1, "ますます大きくする": 2, "左右のスライド": 3, "上下スライド": 4},
-    "animationTypes": ["なし", "フェードイン", "フリップ", "振る", "ぼやけ", "成長", "回転", "左右に移動", "上下に移動"],
+    "pageTransitionType2": {
+        "なし": 0,
+        "徐々に消える": 1,
+        "ますます小さくする": 2,
+        "左右のスライド": 3,
+        "上下スライド": 4
+    },
+    "pageTransitionType": {
+        "なし": 0,
+        "徐々に現れる": 1,
+        "ますます大きくする": 2,
+        "左右のスライド": 3,
+        "上下スライド": 4
+    },
+    "animationTypes": [
+        "なし",
+        "フェードイン",
+        "フリップ",
+        "振る",
+        "ぼやけ",
+        "成長",
+        "回転",
+        "左右に移動",
+        "上下に移動"
+    ],
     "autoFontSize": "フレームサイズへのテキストのサイズ変更",
     "autoFrameHeight": "テキストサイズへのフレームのサイズ変更",
-
     "Apply": "適用",
     "Yes": "はい",
-
-    "End" : "End"
+    "End": "End"
 }
