@@ -22,6 +22,11 @@ dependencies:
   loading_animation_widget: ^1.2.0+4
   js: ^0.6.3
   universal_html: ^2.2.4
+  screenshot: ^3.0.0
+  window_manager_multiplatform_app:
+    git:
+      url: https://github.com/CretaIsland/window_manager_multiplatform.git
+      ref: main
 
 dev_dependencies:
   flutter_test:
