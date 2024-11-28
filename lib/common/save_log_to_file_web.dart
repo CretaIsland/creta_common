@@ -3,6 +3,8 @@ import 'dart:convert';
 // ignore: avoid_web_libraries_in_flutter
 import 'dart:html' as html;
 import 'package:http/http.dart' as http;
+import 'package:universal_html/html.dart';
+
 import 'dart:typed_data';
 import 'dart:async';
 
@@ -84,4 +86,12 @@ String getFirstTokenBeforeDot() {
     return host.substring(0, dotIndex);
   }
   return ''; // 점이 없는 경우 빈 문자열을 반환합니다.
+}
+
+void toggleFullscreen(bool isFullscreen) {
+  if (isFullscreen) {
+    document.documentElement?.requestFullscreen();
+  } else {
+    document.exitFullscreen();
+  }
 }

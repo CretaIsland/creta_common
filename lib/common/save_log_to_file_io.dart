@@ -1,5 +1,7 @@
 import 'dart:io';
 
+import 'package:flutter/services.dart';
+
 void saveLogToFile(String logData, String outFileName, {String folder = "download"}) {
   //print('save log to file io');
   final directory = Directory(folder);
@@ -63,4 +65,12 @@ String getFirstTokenBeforeDot() {
   //   return host.substring(0, dotIndex);
   // }
   // return ''; // 점이 없는 경우 빈 문자열을 반환합니다.
+}
+
+void toggleFullscreen(bool isFullscreen) {
+  if (isFullscreen) {
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
+  } else {
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
+  }
 }
