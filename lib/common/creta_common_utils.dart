@@ -13,7 +13,7 @@ import 'package:image/image.dart' as img;
 import '../lang/creta_lang.dart';
 import 'creta_const.dart';
 
-import 'save_log_to_file_io.dart' if (dart.library.html) 'save_log_to_file_web.dart' as savelog;
+import 'creta_platform_dep_utils.dart' as utils;
 
 class CretaCommonUtils {
   static DateTime debugTime = DateTime.now();
@@ -814,7 +814,7 @@ class CretaCommonUtils {
 
   // 멀티 플랫폼 작업
   static void saveLogToFile(String logData, String outFileName, {String folder = "download"}) {
-    savelog.saveLogToFile(logData, outFileName);
+    utils.saveLogToFile(logData, outFileName);
   }
 
   static Widget underConstruction(
