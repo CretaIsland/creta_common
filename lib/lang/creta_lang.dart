@@ -1,4 +1,6 @@
 // ignore_for_file: non_constant_identifier_names, constant_identifier_names
+import 'package:flutter/foundation.dart';
+
 import '../common/creta_common_utils.dart';
 import '../model/app_enums.dart';
 // import 'creta_lang_en.dart';
@@ -33,17 +35,20 @@ abstract class AbsCretaLang /*with CretaLangMixin */ {
     late String lang;
     switch (language) {
       case LanguageType.korean:
-        lang = 'packages/creta_common/assets/lang/creta_lang_kr.json';
+        lang = 'lang/creta_lang_kr.json';
         break;
       case LanguageType.english:
-        lang = 'packages/creta_common/assets/lang/creta_lang_en.json';
+        lang = 'lang/creta_lang_en.json';
         break;
       case LanguageType.japanese:
-        lang = 'packages/creta_common/assets/lang/creta_lang_jp.json';
+        lang = 'lang/creta_lang_jp.json';
         break;
       default:
-        lang = 'packages/creta_common/assets/lang/creta_lang_kr.json';
+        lang = 'lang/creta_lang_kr.json';
         break;
+    }
+    if (kIsWeb) {
+      lang = 'packages/creta_common/assets/$lang';
     }
     return await CretaCommonUtils.readJsonFromAssets(lang);
   }
