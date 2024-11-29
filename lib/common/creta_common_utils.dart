@@ -5,6 +5,8 @@ import 'dart:math';
 import 'dart:typed_data';
 import 'dart:ui' as ui;
 
+import 'package:flutter/foundation.dart';
+import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:hycop_multi_platform/hycop.dart';
@@ -903,13 +905,19 @@ class CretaCommonUtils {
   }
 
   static Future<Map<String, dynamic>> readJsonFromAssets(String fileName) async {
-    final response = await http.get(Uri.parse('assets/$fileName'));
+    if (kIsWeb) {
+      final response = await http.get(Uri.parse('assets/$fileName'));
 
-    if (response.statusCode == 200) {
-      return jsonDecode(utf8.decode(response.bodyBytes));
+      if (response.statusCode == 200) {
+        return jsonDecode(utf8.decode(response.bodyBytes));
+      } else {
+        //print('!!!!! Failed to load JSON file $fileName, ${response.statusCode} !!!!!');
+        throw Exception('Failed to load JSON file');
+      }
     } else {
-      //print('!!!!! Failed to load JSON file $fileName, ${response.statusCode} !!!!!');
-      throw Exception('Failed to load JSON file');
+      //  Android, Windows case
+      final String data = await rootBundle.loadString('assets/$fileName');
+      return jsonDecode(data);
     }
   }
 }
