@@ -2,7 +2,7 @@
 
 import 'dart:convert';
 import 'dart:math';
-import 'dart:typed_data';
+//import 'dart:typed_data';
 import 'dart:ui' as ui;
 
 import 'package:flutter/foundation.dart';
@@ -916,8 +916,17 @@ class CretaCommonUtils {
       }
     } else {
       //  Android, Windows case
-      final String data = await rootBundle.loadString('assets/$fileName');
-      return jsonDecode(data);
+      try {
+        //final file = File('C:\\project\\creta\\creta_studio\\data\\flutter_assets\\$fileName');
+        // final file = File('data\\flutter_assets\\$fileName');
+        // final contents = await file.readAsString();
+        // return jsonDecode(contents);
+        final String data = await rootBundle.loadString(fileName);
+        return jsonDecode(data);
+      } catch (e) {
+        //print('!!!!! Failed to load JSON file $fileName !!!!!');
+        throw Exception('Failed to load JSON file');
+      }
     }
   }
 }
