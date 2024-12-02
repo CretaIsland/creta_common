@@ -10,6 +10,10 @@ import 'package:universal_html/html.dart';
 import 'dart:typed_data';
 import 'dart:async';
 
+String getOrigin(String? enterprise) {
+  return Uri.base.origin;
+}
+
 void saveLogToFile(String logData, String outFileName, {String folder = "download"}) {
   //print('save log to file web');
   final blob = html.Blob([logData]);

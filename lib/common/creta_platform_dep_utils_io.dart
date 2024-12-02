@@ -1,8 +1,16 @@
 import 'dart:io';
 
+import 'package:creta_common/common/creta_const.dart';
 import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 import 'package:hycop_multi_platform/common/util/logger.dart';
+
+String getOrigin(String? enterprise) {
+  if (enterprise != null && enterprise != "" && enterprise != CretaConst.superAdmin) {
+    return "https://$enterprise.${CretaConst.home}";
+  }
+  return "https://${CretaConst.home}";
+}
 
 void saveLogToFile(String logData, String outFileName, {String folder = "download"}) {
   //print('save log to file io');

@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 
 class CretaConst {
+  static const String home = 'lets-creta.com';
   static const String notLoginUserEmail = 'notloginuserid@sqisoft.com';
   static const String notLoginUserName = 'notloginuser';
   static const String notLoginUserTeam = 'notloginuserid Team';
