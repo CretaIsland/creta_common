@@ -175,6 +175,13 @@ class CretaCommonUtils {
   //   return name;
   // }
 
+  static String color2String(Color color) {
+    String red = color.red.toRadixString(16).padLeft(2, '0');
+    String green = color.green.toRadixString(16).padLeft(2, '0');
+    String blue = color.blue.toRadixString(16).padLeft(2, '0');
+    return "Color(0xff$red$green$blue)";
+  }
+
   static Color string2Color(String? colorStr, {Color defaultValue = Colors.transparent}) {
     if (colorStr == null || colorStr.length < 16) {
       return defaultValue;

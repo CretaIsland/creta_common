@@ -1,17 +1,25 @@
 // ignore_for_file: must_be_immutable, use_function_type_syntax_for_parameters
 
 //import 'package:flutter/foundation.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:hycop_multi_platform/hycop.dart';
+
+import '../common/creta_common_utils.dart';
 //import 'package:cloud_firestore/cloud_firestore.dart';
+
+extension ColorExt on Color {
+  String toHex() {
+    if (kIsWeb) {
+      return toString();
+    }
+    return CretaCommonUtils.color2String(this);
+  }
+}
 
 class CretaModel extends AbsExModel {
   final GlobalKey key = GlobalKey();
-  CretaModel(
-      {required String pmid,
-      required super.type,
-      required super.parent,
-      super.realTimeKey})
+  CretaModel({required String pmid, required super.type, required super.parent, super.realTimeKey})
       : super(pmid: pmid);
 
   String get getMid => mid;
@@ -81,8 +89,7 @@ class CretaModel extends AbsExModel {
         }
         retval += ']';
       } else {
-        String value =
-            entry.value.toString().replaceAll('"', '\\"').replaceAll('\n', ' ');
+        String value = entry.value.toString().replaceAll('"', '\\"').replaceAll('\n', ' ');
         // .replaceAll(']', '\\]')
         // .replaceAll('{', '\\{')
         // .replaceAll('}', '\\}');
@@ -95,6 +102,5 @@ class CretaModel extends AbsExModel {
 }
 
 class DummyModel extends CretaModel {
-  DummyModel(
-      {super.pmid = '', super.type = ExModelType.none, super.parent = ''});
+  DummyModel({super.pmid = '', super.type = ExModelType.none, super.parent = ''});
 }
