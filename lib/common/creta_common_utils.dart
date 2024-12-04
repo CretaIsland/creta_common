@@ -175,15 +175,9 @@ class CretaCommonUtils {
   //   return name;
   // }
 
-  static Color? string2Color(String? colorStr, {String defaultValue = 'Color(0xFFFFFFFF)'}) {
-    if (defaultValue.isEmpty) {
-      if (colorStr == null || colorStr.length < 16) {
-        return null;
-      }
-    } else {
-      if (colorStr == null || colorStr.length < 16) {
-        return Color(int.parse(defaultValue.substring(8, 16), radix: 16));
-      }
+  static Color string2Color(String? colorStr, {Color defaultValue = Colors.transparent}) {
+    if (colorStr == null || colorStr.length < 16) {
+      return defaultValue;
     }
     // MaterialColor(primary value: Color(0xfff44336)) 케이스와
     // Color(0xffffffff) 케이스가 있다.
@@ -195,7 +189,8 @@ class CretaCommonUtils {
     if (extract.length == 8) {
       return Color(int.parse(extract, radix: 16));
     }
-    return null;
+    logger.severe('invalid color string ($colorStr)');
+    return defaultValue;
     // String example = 'MaterialColor(primary value: Color(0xfff44336))';
     // String prefix = 'MaterialColor(primary value: Color(0x';
 
@@ -213,10 +208,8 @@ class CretaCommonUtils {
     List<String> strList = CretaCommonUtils.jsonStringToList(colorStrList);
 
     for (String ele in strList) {
-      Color? color = string2Color(ele, defaultValue: '');
-      if (color != null) {
-        retval.add(color);
-      }
+      Color? color = string2Color(ele, defaultValue: Colors.transparent);
+      retval.add(color);
     }
     return retval;
   }
