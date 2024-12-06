@@ -16,8 +16,7 @@ class CretaVars {
   ServiceType get serviceType => _serviceType;
 
   void _initServiceType() {
-    const String arg =
-        String.fromEnvironment('serviceType', defaultValue: 'signage');
+    const String arg = String.fromEnvironment('serviceType', defaultValue: 'signage');
     _serviceType = ServiceType.fromString(arg);
 
     // var url = html.window.location.href;
@@ -47,6 +46,7 @@ class CretaVars {
 
   bool isCanvaskit = true;
   bool isDeveloper = false;
+  bool isPlayerMode = false;
   Size displaySize = Size.zero;
 
   BookType defaultBookType() {
